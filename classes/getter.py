@@ -1,3 +1,4 @@
+
 #initializer:constructor
 
 #Speical method in a class
@@ -53,4 +54,5 @@ adam=Human(name="adam",gender="Male")
 # print(adam.name)
 
 print(adam.get_name())
+
 
