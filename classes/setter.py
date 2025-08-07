@@ -47,7 +47,7 @@ class Human():
             return
         #new_name is astring
         now = datetime.now()
-        print("Curreent date and time",now)
+        print(f"Name set at {now} to {new_name} from {self._name}")
         write_file(f_name="log.txt",txt=f"At {now} Name changed from {self._name} to {new_name}")
         self._name=new_name
         return new_name
