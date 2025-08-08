@@ -18,14 +18,15 @@ def write_file(f_name,txt):
     with open(f_name,'a') as file:
         file.write(f"{txt} \n")
        
-
+#static<Not changing>
+#static property:<Class itself> -> 
 class Human():
 
     species="H.sapiens"
     planet="Earth"
     genus="Homo"
-
-
+    count=0
+    
     def __init__(self,gender,name):
         print("The initializer wass called")
         self._gender=gender
@@ -36,7 +37,9 @@ class Human():
         else :
           self._ribs=23
           self._curse="Pain"
-
+        #Human.count=Human.count+1
+        self.__class__.count=self.__class__.count+1
+    
     @property
     def name(self):
         now = datetime.now()
@@ -52,7 +55,7 @@ class Human():
             return
         #new_name is astring
         now = datetime.now()
-        print(f"Name set at {now} to {new_name} from {self._name}")
+        print("Curreent date and time",now)
         write_file(f_name="log.txt",txt=f"At {now} Name changed from {self._name} to {new_name}")
         self._name=new_name
         return new_name
@@ -71,26 +74,7 @@ adam=Human(name="adam",gender="Male")
 eve=Human(name="eve",gender="Female")
 
 print("adam species",adam.species)
-print("eve species", eve.species)
+print("eve species",eve.species)
 print("class property",Human.species)
 
-#Getter a property of: <name>:
-#print(adam.name)
-
-#adam.name=234
-
-#adam.print_self()
-
-# print(adam.name)
-# print(adam.name)
-# #log when somebody
-
-# #set is to update
-
-# adam.name="Joseph"
-
-# # @property
-
-# adam.name="Adam"
-
-# adam.name="Samson"
+print("Total humans",Human.count)
