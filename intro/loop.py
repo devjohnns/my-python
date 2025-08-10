@@ -18,7 +18,7 @@ for i in range(0,10):
 for i in range(0, 1000, 2):
     print("for loop is", i)
 
-protection=["Deurex","Kiss","Trust"]
+protection=["Orange","Banana","Mango"]
 
 for i in protection:
     print(i)
